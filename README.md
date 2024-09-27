@@ -28,16 +28,22 @@ npm install -D @chainlink/contracts
 ```
 5、其他安装依赖包：
 ```angular2html  
-npm install solc@0.8.24  这个是将sol文件编译成,bin，和abi文件的的工具
+npm install solc@0.8.24
 npm install -D hardhat-deploy  这个插件方便部署合约及测试，文档还需要安装如下的内容：
-  1、 npm install --save-dev  @nomicfoundation/hardhat-ethers hardhat-deploy-ethers ethers 安装hardhat-deploy-ethers，方便配合hardhat-deploy一起使用，文档说的
-help-hardhat-config,aave-v3-core这个插件可以获取配置的一些模版，给我们提供一个思路
-hardhat-gas-reporter，gas-reporter可以查看合约的gas消耗情况，文档：https://www.npmjs.com/package/hardhat-gas-reporter
-solidity-coverage ，这个是solidity代码检查的工具。安装命令： yarn add solidity-coverage --dev，具体细节：https://www.npmjs.com/package/solidity-coverage
-  1、安装如下命令，因为coverage需要这些包：npm install --save-dev @nomicfoundation/hardhat-chai-matchers@^2.0.0" "@nomicfoundation/hardhat-ignition-ethers@^0.15.0" "@nomicfoundation/hardhat-network-helpers@^1.0.0" "@nomicfoundation/hardhat-verify@^2.0.0" "@types/mocha@>=9.1.0" "hardhat-gas-reporter@^1.0.8" "ts-node@>=8.0.0" "typechain@^8.3.0" "typescript@>=4.5.0
-安装@openzeppelin/contracts，这个功能封装了token的协议实现。例如ERC20等。npm install -D @openzeppelin/contracts 
+npm install --save-dev  @nomicfoundation/hardhat-ethers hardhat-deploy-ethers ethers
+npm install --save-dev hardhat-gas-reporter
+npm install --save-dev solidity-coverage
+  1、
+npm install -D @openzeppelin/contracts 
 ```
- 
+对上面依赖功能的解释：
+
+    1、solc:这个是将sol文件编译成,bin，和abi文件的的工具
+    2、hardhat-deploy：这个插件方便部署合约及测试，需要搭配hardhat-ethers，及ethers才可使用，文档：https://hardhat.org/hardhat-runner/plugins/hardhat-deploy
+    3、hardhat-gas-reporter：gas-reporter可以查看合约的gas消耗情况，如果不需要，可以不需要安装。文档：https://www.npmjs.com/package/hardhat-gas-reporter
+    4、solidity-coverage：这个是solidity代码检查的工具。我一般在remix上写，所以不用，如果在本地写，可以安装这个插件，帮助检查合约的代码。具体细节可查看文档：https://www.npmjs.com/package/solidity-coverage
+    5、安装coverage还需要配合其他的依赖，安装如下命令，因为coverage需要这些包：npm install --save-dev @nomicfoundation/hardhat-chai-matchers@^2.0.0" "@nomicfoundation/hardhat-ignition-ethers@^0.15.0" "@nomicfoundation/hardhat-network-helpers@^1.0.0" "@nomicfoundation/hardhat-verify@^2.0.0" "@types/mocha@>=9.1.0" "hardhat-gas-reporter@^1.0.8" "ts-node@>=8.0.0" "typechain@^8.3.0" "typescript@>=4.5.0
+    6、@openzeppelin/contracts：这个功能封装了token的协议实现。例如ERC20
 
 6、相关运行命令:
 ```angular2html
