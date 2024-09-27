@@ -29,7 +29,7 @@ npm install -D @chainlink/contracts
 5、其他安装依赖包：
 ```angular2html  
 npm install solc@0.8.24
-npm install -D hardhat-deploy  这个插件方便部署合约及测试，文档还需要安装如下的内容：
+npm install -D hardhat-deploy
 npm install --save-dev  @nomicfoundation/hardhat-ethers hardhat-deploy-ethers ethers
 npm install --save-dev hardhat-gas-reporter
 npm install --save-dev solidity-coverage
