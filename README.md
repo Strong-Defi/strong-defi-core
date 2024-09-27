@@ -33,7 +33,6 @@ npm install -D hardhat-deploy
 npm install --save-dev  @nomicfoundation/hardhat-ethers hardhat-deploy-ethers ethers
 npm install --save-dev hardhat-gas-reporter
 npm install --save-dev solidity-coverage
-  1、
 npm install -D @openzeppelin/contracts 
 ```
 对上面依赖功能的解释：
