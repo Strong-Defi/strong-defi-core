@@ -43,6 +43,7 @@ npm install -D @openzeppelin/contracts
     4、solidity-coverage：这个是solidity代码检查的工具。我一般在remix上写，所以不用，如果在本地写，可以安装这个插件，帮助检查合约的代码。具体细节可查看文档：https://www.npmjs.com/package/solidity-coverage
     5、安装coverage还需要配合其他的依赖，安装如下命令，因为coverage需要这些包：npm install --save-dev @nomicfoundation/hardhat-chai-matchers@^2.0.0" "@nomicfoundation/hardhat-ignition-ethers@^0.15.0" "@nomicfoundation/hardhat-network-helpers@^1.0.0" "@nomicfoundation/hardhat-verify@^2.0.0" "@types/mocha@>=9.1.0" "hardhat-gas-reporter@^1.0.8" "ts-node@>=8.0.0" "typechain@^8.3.0" "typescript@>=4.5.0
     6、@openzeppelin/contracts：这个功能封装了token的协议实现。例如ERC20
+    7、npm install -D solc 这个功能是将sol文件编译成abi，bin文件。
 
 6、相关运行命令:
 ```angular2html
