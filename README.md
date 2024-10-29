@@ -57,12 +57,6 @@ npm install -D @openzeppelin/contracts
 8、合约介绍
 ```angular2html
 需求文档
-建议：
-
-需要写测试！！！
-合约开发完成后部署到 sepolia 进行测试
-可以自己在sepolia 上面发一个erc20 token 作为reward token的代币
-第一个stake token 是所在链的native currency；如果想开其他pool，stake token 可以是erc20Token，合约自行改造调整。
 
 1️⃣ 系统概述
 SCHStake 是一个基于区块链的质押系统，支持多种代币的质押，并基于用户质押的代币数量和时间长度分配 SCToken 代币作为奖励。系统可提供多个质押池，每个池可以独立配置质押代币、奖励计算等。
