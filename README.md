@@ -50,6 +50,10 @@ npm install -D @openzeppelin/contracts
 1、脚本：yarn hardhat run scripts/deploy.ts 或者  npx hardhat run scripts/deploy.ts  --network [name]
 2、编译智能合约命令：npx hardhat compile
 3、部署命令：npx hardhat deploy  执行的是deploy包下的所有脚本，按照文件顺序执行
+4、智能合约编译命令： solcjs --abi --include-path node_modules/ --base-path . contracts/SCHStake.sol -o /Users/v_shaochunhai/Desktop/ether/go_project/strong-defi-backend/abi 
+    1、 --include-path node_modules/，表示编译import的合约
+    2、 --base-path .，表示编译当前目录下的合约
+    3、 -o bin，表示输出abi和bin文件
 ``` 
 
 7、在项目部署前，要先创建.env文件。具体配置可以参考[env.example]，文件中的环境变量如果不需要，需要在config.js中给注释掉，否则会启动会报错

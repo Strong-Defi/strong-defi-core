@@ -30,7 +30,7 @@ contract SCHStake is Initializable, UUPSUpgradeable, AccessControl {
 
     event UpdatePool(Pool pool);
 
-    event AddPool(Pool pool);
+    event AddPool(uint256 poolId);
 
     SCToken public SCH;
 
@@ -224,7 +224,9 @@ contract SCHStake is Initializable, UUPSUpgradeable, AccessControl {
         );
         poolsMapping[pools.length - 1] = pools[pools.length - 1];
 
-        emit AddPool(pools[pools.length - 1]);
+        emit AddPool(pools.length - 1);
+
+        return pools.length-1;
     }
 
     function _updatePools() internal {
